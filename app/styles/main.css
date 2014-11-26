@@ -2,6 +2,15 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: "proxima-nova-alt";
+}
+
+p {
+  font-size: 18px;
+}
+
+.hd-large {
+  font-size: 62px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -27,6 +36,11 @@ body {
 
 .nav-pills > li {
 float: none;
+}
+
+.nav a {
+  color: #000;
+  font-weight: 600;
 }
 
 .pull-right {
