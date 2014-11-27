@@ -9,6 +9,16 @@ p {
   font-size: 18px;
 }
 
+.header a:hover, .header a:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a.action:hover, a.action:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
 .hd-large {
   font-size: 62px;
 }
@@ -43,6 +53,10 @@ float: none;
   font-weight: 600;
 }
 
+.header h1 a {
+  color: #777;
+}
+
 .pull-right {
   float: left !important;
 }
@@ -61,7 +75,6 @@ float: none;
   width: 100%;
   float: none;
   background-color: #f4f4f4;
-  cursor: pointer;
 }
 
 
@@ -98,11 +111,16 @@ float: none;
     background-position: center;   
   }
   .jumbotron h1 {
-    padding: 8px 60px;
+    padding: 10px 60px;
     font-size: 48px;
     background-color: wheat;
+    box-shadow: 0 0 10px #333;
   }
 
+}
+
+.feature {
+  box-shadow: inset 0 0 10px #ccc;
 }
 
 div.feature img.project-img {
@@ -111,6 +129,8 @@ div.feature img.project-img {
   float: left;
   overflow: hidden;
   transition: all 0.2s linear;
+  opacity: 0.3;
+  filter: alpha(opacity=40);  
 }
 
 div.feature div.overlay-colour {
@@ -139,11 +159,11 @@ div.feature div.overlay-content {
   top: 0;
   bottom: 0;
   position: absolute;
-  margin: auto;
+  margin: 2em 0;
 }
 
 div.overlay-content h3 {
-  color: white;
+  color: #000;
   text-align: center;
   margin-top: 20px;
   -webkit-transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -162,12 +182,13 @@ div.feature div.overlay-content h5 {
   -ms-transition: all 0.2s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: all 0.2s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.2s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  color: white;
-  margin-top: 40px;
+  color: #777;
+  margin-top: 12px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100%;
   text-transform: none;
-  font-family: 'latoregular';
+  line-height: inherit;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   letter-spacing: 0.03em;
@@ -176,6 +197,51 @@ div.feature div.overlay-content h5 {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
 }
+
+/* Action Buttons */
+
+.action {
+  -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+  -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #66c437), color-stop(1, #6ed636));
+  background:-moz-linear-gradient(top, #66c437 5%, #6ed636 100%);
+  background:-webkit-linear-gradient(top, #66c437 5%, #6ed636 100%);
+  background:-o-linear-gradient(top, #66c437 5%, #6ed636 100%);
+  background:-ms-linear-gradient(top, #66c437 5%, #6ed636 100%);
+  background:linear-gradient(to bottom, #66c437 5%, #6ed636 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#66c437', endColorstr='#6ed636',GradientType=0);
+  background-color:#66c437;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  display: block;
+  margin: 0 1.2em;
+  text-align: center;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:20px;
+  font-weight:bold;
+  padding:13px 32px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #5b8a3c;
+}
+.action:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6ed636), color-stop(1, #66c437));
+  background:-moz-linear-gradient(top, #6ed636 5%, #66c437 100%);
+  background:-webkit-linear-gradient(top, #6ed636 5%, #66c437 100%);
+  background:-o-linear-gradient(top, #6ed636 5%, #66c437 100%);
+  background:-ms-linear-gradient(top, #6ed636 5%, #66c437 100%);
+  background:linear-gradient(to bottom, #6ed636 5%, #66c437 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ed636', endColorstr='#66c437',GradientType=0);
+  background-color:#6ed636;
+}
+.action:active {
+  position:relative;
+  top:1px;
+}
+
 
 .container-narrow > hr {
   margin: 30px 0;
