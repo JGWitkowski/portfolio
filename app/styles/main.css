@@ -5,6 +5,7 @@ body {
   padding-bottom: 0px;
   font-family: "proxima-nova-alt";
   font-size: 16px;
+  background-color: #fff;
 }
 
 .container {
@@ -99,7 +100,7 @@ a.action:hover, a.action:focus {
 }
 
 .header h1:focus, .header h1:hover {
-  background-color: yellow;
+  background-color: #fff;
 }
 
 .nav-pills > li {
@@ -112,7 +113,7 @@ float: none;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: yellow;
+  background-color: #fff;
 }
 
 .header h1 a {
@@ -160,6 +161,10 @@ float: none;
 /* Customize container */
 @media (min-width: 700px) {
 
+  body {
+    background-color: aliceblue;
+  }
+
   .feature {
     width: 32.33333%;
     float: left;
@@ -169,7 +174,7 @@ float: none;
   }
   .container {
     max-width: 960px;
-    background-image: url("/images/tee-background.png");
+    background-image: url("/images/tee-background2.png");
     padding-bottom: 28px;
   }
   .pull-right {
