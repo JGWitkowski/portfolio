@@ -48,6 +48,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      recess: {
+          files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+          tasks: ['recess:dist']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -66,7 +70,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9001,
+        port: 9002,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
@@ -128,6 +132,20 @@ module.exports = function (grunt) {
         },
         src: ['test/spec/{,*/}*.js']
       }
+    },
+    recess: {
+        options: {
+            compile: true
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles',
+                src: '{,*/}*.less',
+                dest: '.tmp/styles/',
+                ext: '.css'
+            }]
+        }
     },
 
     // Empties folders to start fresh
@@ -333,13 +351,15 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'copy:styles'
+        'copy:styles',
+        'recess'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
         'copy:styles',
+        'recess',
         'imagemin',
         'svgmin'
       ]

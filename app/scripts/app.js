@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('fennergolfApp', [
+  .module('portfolioApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -17,38 +17,23 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        //controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'views/about.html'
+        //controller: 'scripts/controllers'/
       })
-      .when('/group-lessons', {
-        templateUrl: 'views/group-lessons.html',
-        controller: 'GroupLessonsCtrl'
-      })   
-      .when('/indoor-golf', {
-        templateUrl: 'views/indoor-golf.html'
-        // controller: 'IndoorGolfCtrl'
-      }) 
-      .when('/junior-clinics', {
-        templateUrl: 'views/junior-clinics.html'
-        // controller: 'JuniorClinicsCtrl'
-      })     
-      .when('/private-lessons', {
-        templateUrl: 'views/private-lessons.html'
-        // controller: 'JuniorClinicsCtrl'
-      }) 
-      .when('/contact', {
-        templateUrl: 'views/contact.html'
-        // controller: 'JuniorClinicsCtrl'
-      })                              
+      .when('/work', {
+        templateUrl: 'views/work.html'
+        //controller: 'scripts/controllers'/
+      })
       .otherwise({
         redirectTo: '/'
       });

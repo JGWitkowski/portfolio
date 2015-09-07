@@ -18,36 +18,49 @@
     <script src="//use.typekit.net/heb6bns.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
-  <body ng-app="fennergolfApp">
+  <body ng-app="portfolioApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <!-- Add your site or application content here -->
-
+      <header>
+        <nav class="navbar nav-bar default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Justin.G.Witkowski</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#/work">Work</a></li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/about">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+        </nav>   
+        </header>
     <div class="container">
-      <div class="header">    
-        <ul class="leftNav nav nav-pills pull-left">
-          <li><a ng-href="#/about">Jim</a></li>
-          <li><a ng-href="#/group-lessons">Group Lessons</a></li>
-          <li><a ng-href="#/indoor-golf">Indoor Golf</a></li>          
-        </ul>
-        <ul class="rightNav nav nav-pills pull-right">
-          <li><a ng-href="#/junior-clinics">Junior Clinics</a></li>
-          <li><a ng-href="#/private-lessons">Private Lessons</a></li>
-          <li><a ng-href="#/contact">Contact</a></li>
-        </ul>
-        <h1 class="text-muted"><a ng-href="#/">FENNER GOLF</a></h1>  
-      </div>
-
       <div class="content-container" ng-view=""></div>
     </div>
-
-    <div class="footer">
-      <div class="footer-container">
-      <p>Jim Fenner Golf Lessons | Worcester, MA</p>
+    <footer>
+      <div class="row footer-content">
+        <div class="col-md-5">
+          <p>Justin Witkowski is a front-end web developer looking to provide quality service for small business owners.</p>
+        </div>
+        <div class="col-md-4">
+          <p>Contact</p>
+        </div>
+        <div class="col-md-3">
+          <p>Copyright</p>
+        </div>        
       </div>
-    </div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -80,6 +93,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/components-bootstrap/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
