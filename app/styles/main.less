@@ -1,15 +1,46 @@
 @import "bower_components/bootstrap/less/variables.less";
 
-@custom-brand-first: #ddd;
+@custom-brand-first: #002244;
+@custom-brand-second: #69BE28;
+@custom-brand-third: #A5ACAF;
 @showcase-font-size: @font-size-h1 * 2.33;
 
 body {
   font-size: @font-size-large;
 }
 header {
-  background-color: @custom-brand-first;
-  border-bottom: 20px solid darken(@custom-brand-first, 5%);
+  background-color: lighten(@custom-brand-first, 5%);
+  border-bottom: 10px solid darken(@custom-brand-second, -2%);
+
+  a {
+    color: #fff;
+    min-width: 150px;
+    text-align: center;
+  }
+  .navbar {
+    margin-bottom: 5px;
+  }
+  .navbar-toggle {
+    background-color: @custom-brand-second;
+  }
+  .icon-bar {
+    background-color: #fff;
+  }
 }
+
+.navbar-brand img {
+  height: 70px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  border: 3px solid @custom-brand-third;
+  border-bottom: 2px solid darken(@custom-brand-third, 3%);
+}
+
+h1,h2 {
+  font-weight: 800;
+}
+
 //override bootstrap's default negative margins
 .row {
   margin-left: 0;
@@ -20,19 +51,36 @@ header {
   }
 }
 .showcase {
-  background-color: lighten(@custom-brand-first, 5%);
+  background-color: lighten(@custom-brand-third, 5%);
+  background-image: url('/images/elephant-showcase.gif');
+  background-position: 0px -20px;
   h1 {
     font-size: @showcase-font-size;
-    font-weight: 800;
   }
 }
 .main-content {
-  background-color: darken(@custom-brand-first, 15%);  
+  background-color: darken(@custom-brand-third, -5%);
+  padding: 1.5em 1.5em;
+  border-top: 8px solid lighten(@custom-brand-third, 15%);  
 }
 
 footer {
-  background-color: darken(@custom-brand-first, 25%);
+  background-color: darken(@custom-brand-first, 5%);
   padding: 2em 0em;
+  color: #bbb;
+}
+
+.linkedin {
+  margin: 0;
+  background: url('/images/social-media-sprite.png') no-repeat 0 0px;
+  padding-left: 30px;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  zoom: 1;
+  margin: 0;
+  background-position: 0px -561px;
+  overflow: hidden;
 }
 
 a.primarybutton {
@@ -40,12 +88,40 @@ a.primarybutton {
     border-style: solid;
     padding: 0.8em 1.4em;
     font-size: 1em;
+    color: darken(@custom-brand-third, -20%);
+    //color: @custom-brand-second;
     border-radius: 3px;
     display: inline-block;
     line-height: 100%;
     position: relative;
     transition: all 0.4s ease 0s;
-    border-color: #000;
+    border-color: darken(@custom-brand-second, 18%);
+    background-color: darken(@custom-brand-second, 9%);
+    margin-top: 0.8em;
+}
+
+a.primarybutton:hover {
+  border-color: darken(@custom-brand-second, 30%)
+}
+
+.work-row {
+  margin-top: 2em;
+}
+
+.work-desc {
+  margin-bottom: 1.5em;
+  h2 {
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+}
+
+.work-top {
+  margin-top: 20px;
+  p {
+    padding-bottom: 1.2em;
+    border-bottom: 5px solid lighten(@custom-brand-third, 15%); 
+  }
 }
 
 @media (min-width: @screen-sm-min) {
@@ -55,15 +131,27 @@ a.primarybutton {
   }
 }
 
+@media (min-width: @screen-desktop) {
+  .work-desc {
+    display: none;
+  }
+  .work-row {
+    clear: none;
+  }
+}
+
 //hover images for portfolio work
 .hovercontent h1 {
   color: white;
   font-size: 1.5em;
-  margin-top: 40%;
+  margin-top: 10%;
+  padding: 0 25px;
 }
 .hovercontent h3 {
   color: #a1a1a1;
   font-weight: 100;
+  font-size: 1.3em;
+  padding: 0 25px; 
 }
 
 // .grid {
@@ -79,6 +167,7 @@ a.primarybutton {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1.3em;
 }
 .hoveritem img {
   max-width: 100%;
@@ -90,7 +179,7 @@ a.primarybutton {
 .hovercontent {
   position: absolute;
   font-family: "Helvetica", Arial, sans-serif;
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.7);
