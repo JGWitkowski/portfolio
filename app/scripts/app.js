@@ -34,6 +34,10 @@ angular
         templateUrl: 'views/work.html'
         //controller: 'scripts/controllers'/
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html'
+        //controller: 'scripts/controllers'/
+      })
       .otherwise({
         redirectTo: '/'
       });

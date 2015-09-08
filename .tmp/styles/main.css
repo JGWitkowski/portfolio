@@ -78,7 +78,19 @@ footer {
   overflow: hidden;
   line-height: 25px;
   background: url('/images/social-media-sprite.png') no-repeat 0 0;
-  background-position: 0 -561px;
+  background-position: 0 -560px;
+  zoom: 1;
+}
+
+.email {
+  display: inline-block;
+  height: 25px;
+  padding-left: 30px;
+  margin: 0;
+  overflow: hidden;
+  line-height: 25px;
+  background: url('/images/social-media-sprite.png') no-repeat 0 0;
+  background-position: 0 -630px;
   zoom: 1;
 }
 
@@ -122,6 +134,10 @@ a.primarybutton:hover {
 .work-top p {
   padding-bottom: 1.2em;
   border-bottom: 5px solid #ced1d3;
+}
+
+.content {
+  margin: 25px 0;
 }
 
 @media (min-width: 768px) {
@@ -184,19 +200,13 @@ a.primarybutton:hover {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transform: scale3d(1.3, 1.3, 1) translate3d(0, 10%, 0);
-     -moz-transform: scale3d(1.3, 1.3, 1) translate3d(0, 10%, 0);
-       -o-transform: scale3d(1.3, 1.3, 1) translate3d(0, 10%, 0);
           transform: scale3d(1.3, 1.3, 1) translate3d(0, 10%, 0);
-  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-     -moz-transition: opacity 0.2s ease-out, -moz-transform 0.2s ease-out;
-       -o-transition: opacity 0.2s ease-out, -o-transform 0.2s ease-out;
+          transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
           transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .hoveritem .link:hover .hovercontent {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-     -moz-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-       -o-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
           transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
 }
