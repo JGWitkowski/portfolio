@@ -1,7 +1,9 @@
 {
   "name": "fennergolf",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "forever": "^0.15.1"
+  },
   "devDependencies": {
     "coffee-script": "~1.6.3",
     "generator-bootstrap": "^0.2.1",
@@ -18,6 +20,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-daemon": "^0.1.1",
     "grunt-filerev": "^0.2.1",
     "grunt-google-cdn": "^0.4.0",
     "grunt-karma": "^0.9.0",
