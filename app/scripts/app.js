@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name fennergolfApp
+ * @name justinPortfolio
  * @description
- * # fennergolfApp
+ * # justinPortfolio
  *
  * Main module of the application.
  */

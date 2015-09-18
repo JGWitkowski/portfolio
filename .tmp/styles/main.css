@@ -25,6 +25,11 @@ header .icon-bar {
   background-color: #fff;
 }
 
+h1,
+h2 {
+  font-weight: 800;
+}
+
 .navbar-brand img {
   position: absolute;
   top: 8px;
@@ -32,11 +37,6 @@ header .icon-bar {
   height: 70px;
   border: 3px solid #a5acaf;
   border-bottom: 2px solid #9da5a8;
-}
-
-h1,
-h2 {
-  font-weight: 800;
 }
 
 .row {
